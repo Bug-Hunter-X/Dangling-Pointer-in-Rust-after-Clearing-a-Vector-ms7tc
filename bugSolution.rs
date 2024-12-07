@@ -1,0 +1,1 @@
+fn main() {    let mut v = vec![1, 2, 3];    let mut v_copy = v.clone(); // Create a copy to safely iterate     for i in &v_copy {        println!("{}", i);    }    v.clear();    println!("Vector cleared");} 
