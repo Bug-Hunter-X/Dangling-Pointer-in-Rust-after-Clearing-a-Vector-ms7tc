@@ -1,0 +1,1 @@
+fn main() {    let mut v = vec![1, 2, 3];    let ptr = v.as_mut_ptr();    // unsafely get a raw pointer to the vector's data    let len = v.len();    v.clear(); // This deallocate the vector's memory    unsafe {        for i in 0..len {            println!("{}", *ptr.add(i)); // Dereference the pointer after the vector is deallocated         }    }}
